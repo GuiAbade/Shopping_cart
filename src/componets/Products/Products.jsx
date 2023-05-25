@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Products.css';
 import fetchProducts from '../../api/fetchProducts';
+import ProductCard from '../ProductCard/ProductCard';
 
 function Products() {
 
@@ -11,15 +12,14 @@ function Products() {
     fetchProducts('iphone').then((response) => {
 
       setProducts(response);
+      console.log(products);
 
     });
   }, []);
 
   return ( 
     <section className="products container">
-      {
-        products.map((product) => <p key={product.title}>{product.title}</p>)
-      }
+      <ProductCard/>
     </section>
   );
 }
