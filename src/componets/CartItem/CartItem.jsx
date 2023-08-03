@@ -1,16 +1,18 @@
 import React from 'react';
+import propTypes from 'prop-types'; 
 import { BsCartDashFill } from 'react-icons/bs';
+
 import './CartItem.css';
-import propTypes from 'prop-types';
 import formatCurrency from '../../utils/formatCurrency';
 
 function CartItem({ data }) {
 
-  const {thumbail, title, price} = data;
+  const {thumbnail, title, price} = data;
+
   return (
     <section className="cart-item">
       <img  
-        src="" 
+        src={thumbnail} 
         alt="Imagem do produto" 
         className="cart-item-image"
       />
@@ -31,3 +33,7 @@ function CartItem({ data }) {
 }
 
 export default CartItem;
+
+CartItem.propTypes ={
+  data: propTypes.object
+}.isRequired;
