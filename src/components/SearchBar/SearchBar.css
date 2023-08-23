@@ -9,7 +9,7 @@
   padding-right: 13px;
 }
 
-.search_input{
+.search__input {
   padding: 13px;
   flex-grow: 1;
   border: none;
@@ -19,7 +19,7 @@
   border-right: 1px solid #ddd;
 }
 
-.search_button{
+.search__button {
   background: none;
   border: none;
   font-size: 1rem;

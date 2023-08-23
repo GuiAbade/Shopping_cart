@@ -1,6 +1,7 @@
 import React from 'react';
 import { BiLoaderAlt } from 'react-icons/bi';
-import './Loading.css'; 
+
+import './Loading.css';
 
 function Loading() {
   return <BiLoaderAlt className="loading" />;
